@@ -1,91 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-  <title>Friend Finder</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1"> 
-  
-  <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<head>
+	<title>Survey</title>
 
-  <!-- Bootstrap CDNs-->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+	<!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 
-    <!-- Font Awesome Glyphicons -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+	<!-- Bootstrap CDNs-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
 
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
-</head>
+	<!-- Font Awesome Glyphicons -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
+
+	</head>
+
 <body>
-
 	<div class="container">
-
+	  <div>
 		<h2>Survey Questions</h2>
 		<hr>
-
 		<h3><strong>About You</strong></h3>
-		<h4>Name (Required)</h4>
-		<input type="text" name="" id="name" class="form-control" required="">
+		<h4><label for="name" >Name (Required)</label></h4>
+		<input type="text" name="name" id="name" class="form-control" required="">
 
-		<h4>Link to Photo Image (Required)</h4>
-		<input type="text" name="" id="photo" class="form-control" required="">
-
+		<h4><label for="photo" >Link to Photo Image (Required)</label></h4>
+		<input type="text" name="photo" id="photo" class="form-control" required="">
 		<hr>
 
 		<h3><strong>Question 1</strong></h3>
 		<h4>You had a fun childhood.</h4>
-		<select name="option-choice" id="quest1" value="3">
-		  <option>1</option>
-		  <option>2</option>
-		  <option selected="selected">3</option>
-		  <option>4</option>
-		  <option>5</option>
+		<select name="option-choice" id="question1">
+		  <option value="">Choose an Option</option>
+		  <option value="1">1 (Strongly Disagree)</option>
+		  <option value="2">2</option>
+		  <option value="3">3</option>
+		  <option value="4">4</option>
+		  <option value="5">5 (Strongly Agree)</option>
 		</select>
 
 		<h3><strong>Question 2</strong></h3>
 		<h4>You have patience to listen to people.</h4>
+		<select name="option-choice" id="q2">
+		  <option value="">Choose an Option</option>
+		  <option value="1">1 (Strongly Disagree)</option>
+		  <option value="2">2</option>
+		  <option value="3">3</option>
+		  <option value="4">4</option>
+		  <option value="5">5 (Strongly Agree)</option>
+		</select>
 
 		<h3><strong>Question 3</strong></h3>
 		<h4>You are easily agitated when people are don't do what you think they should.</h4>
+		<select name="option-choice" id="q3">
+		  <option value="">Choose an Option</option>
+		  <option value="1">1 (Strongly Disagree)</option>
+		  <option value="2">2</option>
+		  <option value="3">3</option>
+		  <option value="4">4</option>
+		  <option value="5">5 (Strongly Agree)</option>
+		</select>
 
 		<h3><strong>Question 4</strong></h3>
 		<h4>You like to discuss goals in life.</h4>
+		<select name="option-choice" id="q4">
+		  <option value="">Choose an Option</option>
+		  <option value="1">1 (Strongly Disagree)</option>
+		  <option value="2">2</option>
+		  <option value="3">3</option>
+		  <option value="4">4</option>
+		  <option value="5">5 (Strongly Agree)</option>
+		</select>
 
 		<h3><strong>Question 5</strong></h3>
 		<h4>You find it difficult to relate to other people's feelings.</h4>
+		<select name="option-choice" id="q5">
+		  <option value="">Choose an Option</option>
+		  <option value="1">1 (Strongly Disagree)</option>
+		  <option value="2">2</option>
+		  <option value="3">3</option>
+		  <option value="4">4</option>
+		  <option value="5">5 (Strongly Agree)</option>
+		</select>
 
 		<h3><strong>Question 6</strong></h3>
 		<h4>Your family is a great support system for you.</h4>
+		<select name="option-choice" id="q6">
+		  <option value="">Choose an Option</option>
+		  <option value="1">1 (Strongly Disagree)</option>
+		  <option value="2">2</option>
+		  <option value="3">3</option>
+		  <option value="4">4</option>
+		  <option value="5">5 (Strongly Agree)</option>
+		</select>
 
 		<h3><strong>Question 7</strong></h3>
 		<h4>You talk it out if you're having a difficult challenge with someone or something.</h4>
+		<select name="option-choice" id="q7">
+		  <option value="">Choose an Option</option>
+		  <option value="1">1 (Strongly Disagree)</option>
+		  <option value="2">2</option>
+		  <option value="3">3</option>
+		  <option value="4">4</option>
+		  <option value="5">5 (Strongly Agree)</option>
+		</select>
 
 		<h3><strong>Question 8</strong></h3>
-		<h4>You get a charge out of being around a group of people.</h4>
+		<h4>You like most kinds of music.</h4>
+		<select name="option-choice" id="q8">
+		  <option value="">Choose an Option</option>
+		  <option value="1">1 (Strongly Disagree)</option>
+		  <option value="2">2</option>
+		  <option value="3">3</option>
+		  <option value="4">4</option>
+		  <option value="5">5 (Strongly Agree)</option>
+		</select>
 
 		<h3><strong>Question 9</strong></h3>
-		<h4>You like most kinds of music.</h4>
+		<h4>You get a charge out of being around a group of people.</h4>
+		<select name="option-choice" id="q9">
+		  <option value="">Choose an Option</option>
+		  <option value="1">1 (Strongly Disagree)</option>
+		  <option value="2">2</option>
+		  <option value="3">3</option>
+		  <option value="4">4</option>
+		  <option value="5">5 (Strongly Agree)</option>
+		</select>
 
 		<h3><strong>Question 10</strong></h3>
 		<h4>You like to get out a good laugh now and again.</h4>
+		<select name="option-choice" id="q10">
+		  <option value="">Choose an Option</option>
+		  <option value="1">1 (Strongly Disagree)</option>
+		  <option value="2">2</option>
+		  <option value="3">3</option>
+		  <option value="4">4</option>
+		  <option value="5">5 (Strongly Agree)</option>
+		</select>
 
 		<br>
 		<br>
+	</div> <!-- before survey questions -->
+
+	<div id="myModal" class="modal fade" role="dialog">
+	  	<div class="modal-dialog">
+		    <!-- Modal content-->
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal"></button>
+		        <h3 class="modal-title">Best Match for Your Selections!</h3>
+		      </div> <!-- modal-header -->
+		      <div class="modal-body">
+		        <h2 id="#best-match-name">_</h2>
+		        <img id="#best-match-photo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnGNFQegiCHebW75gz1cBnIbW8o1ZCMq1wGAri83952UIs3wFnDxUNM59S" alt="no photo">
+		      </div> <!-- modal-body -->
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		      </div> <!-- modal-footer -->
+		    </div> <!-- div modal-content -->
+		</div> <!-- div modal-dialog -->
+	</div>  <!-- div myModal -->
+
+	<div>
 
 		<!-- Submit Button -->
 		<button type="submit" class="btn btn-primary btn-block" id="submit">Submit</button>
 
 		<hr>
-    <div class="row">
-      <div class="col-lg-12">
-          <div class="panel-heading">
-            <h3 class="panel-title"><strong>API FriendS List | GitHub Repo</strong></h3>
-          </div>
-      </div>
-    </div>
+        <footer class="footer">
+      		<div class="container">
+        	<p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/MLangteau/FriendFinder">GitHub Repo</a></p>
+      		</div>
+    	</footer>
 
-	</div>
-
+	</div> <!-- div submit and footer -->
+  </div> <!-- div container -->
 </body>
+<script type="text/javascript">
+// In this code below we create the Front-end JavaScript which "POSTS" our form data to our express server.
+// In essence, when the user hits submit, jQuery grabs all of the fields then sends a post request to our api
+// Our api recognizes the route (/friends)... and then runs the associated code (found in api-routes.js).
+// In this case the associated code "saves" the data to the friends.js file
+
+    $("#submit").on("click", function(event) {
+      event.preventDefault();
+      console.log("Got here");
+
+      // Here we grab the form fields
+      var newUser = {
+        name: $("#name").val().trim(),
+        photo: $("#photo").val().trim(),
+        choice: [$("#question1").val(),$("#q2").val(),$("#q3").val(),$("#q4").val(),$("#q5").val(),$("#q6").val(),$("#q7").val(),$("#q8").val(),$("#q9").val(),$("#q10").val()]
+      };
+      
+      console.log("newUser is: ",newUser);
+
+      if(!newUser.choice[0].match(/^\d+$/.$)) {
+      	console.log ("matches");
+      }
+      else {
+      	console.log ("does not match");	
+      }
+
+      // The callback is the response of the server. In our case, we set up code in api-routes 
+      //	that "returns" true or false depending on if "friends" is available or not.
+
+      $.post("/api/friends", newUser,
+        function(result) {
+
+          // grab the result name and photo who match with newUser the best (code will decide)
+          
+   //        $("#best-match-name").text(result.name);
+   //        $("#best-match-photo").attr("src", result.photo);
+ 	//	   $("#myModal").modal("fade");
+
+        });
+
+    }); // end .submit
+
+// In this code, jQuery is used to "download" the data from our server
+	// We then dynamically display this content in our table. This is very similar to the group projects you just completed.
+	// It's also very similar to the NYT search application. In fact, I copied a ton of code from there.
+	function runFriendsQuery(){
+		// Here we get the location of the root page.
+		// We use this instead of explicitly saying the URL is localhost:3001 because the url will change when we deploy.
+		var currentURL = window.location.origin;
+		// The AJAX function uses the URL of our API to GET the data associated with it (initially set to localhost)
+		$.ajax({url: currentURL + "/api/friends", method: "GET"})
+			.done(function(friendsArray) {
+				// Here we are logging the URL so we have access to it for troubleshooting
+				console.log("------------------------------------");
+				console.log("URL: " + currentURL + "/api/friends");
+				console.log("------------------------------------");
+				// Here we then log the friendData to console, where it will show up as an object.
+				console.log(friendsArray);
+				console.log("------------------------------------");
+				// Loop through and display each of the customers
+/*				for (var i=0; i<friendsArray.length; i++){
+					// Create the HTML Well (Section) and Add the table content for each friend
+					var friendsSection = $("<div>");
+					friendsSection.addClass('well');
+					friendsSection.attr('id', 'tableWell-' + i+1);
+					$('#friendsSection').append(friendsSection);
+					var friendNumber = i + 1;
+					// Then display the remaining fields in the HTML (Section Name, Date, URL)
+					$("#tableWell-"+ i+1).append('<h2><span class="label label-primary">' + friendNumber + "</span> | " + friendsArray[i].name + "</h2>");
+				}  // end of for loop
+*/
+			});
+	}
+	// This function resets all of the data in friends. This is intended to let you restart a demo.
+/*
+	function clearFriends(){
+		var currentURL = window.location.origin;
+		$.ajax({url: currentURL + "/api/clear", method: "GET"})
+	}
+
+	$("#clear").on('click', function(){
+		alert("Clearing...");
+		clearFriends();
+		// Refresh the page after data is cleared
+		location.reload();
+	});
+*/
+	// Run Query on friends
+	runFriendsQuery();
+
+</script>
 </html>
