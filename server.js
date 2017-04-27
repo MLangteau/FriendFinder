@@ -8,8 +8,12 @@ var bodyParser = require("body-parser");
 // Sets up the Express App
 // =============================================================
 var app = express();
-var PORT = process.env.PORT || 3000;
-
+var PORT = process.env.PORT || 8080;
+/*
+app.get('/', function (req, res) {
+	res.send('Hello World');        // test to see if running correctly
+})
+*/
 // Sets up the Express app to handle data parsing
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));

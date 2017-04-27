@@ -32,7 +32,7 @@
 
 		<h3><strong>Question 1</strong></h3>
 		<h4>You had a fun childhood.</h4>
-		<select name="option-choice" id="question1">
+		<select name="option-choice" id="q1">
 		  <option value="">Choose an Option</option>
 		  <option value="1">1 (Strongly Disagree)</option>
 		  <option value="2">2</option>
@@ -150,11 +150,11 @@
 		    <div class="modal-content">
 		      <div class="modal-header">
 		        <button type="button" class="close" data-dismiss="modal"></button>
-		        <h3 class="modal-title">Best Match for Your Selections!</h3>
+		        <h3 class="modal-title"> Best Match for Your Selections!</h3>
 		      </div> <!-- modal-header -->
 		      <div class="modal-body">
-		        <h2 id="#best-match-name">_</h2>
-		        <img id="#best-match-photo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnGNFQegiCHebW75gz1cBnIbW8o1ZCMq1wGAri83952UIs3wFnDxUNM59S" alt="no photo">
+		        <h2 id="best-match-name">_</h2>
+		        <img id="best-match-photo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnGNFQegiCHebW75gz1cBnIbW8o1ZCMq1wGAri83952UIs3wFnDxUNM59S" alt="no photo">
 		      </div> <!-- modal-body -->
 		      <div class="modal-footer">
 		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -166,7 +166,7 @@
 	<div>
 
 		<!-- Submit Button -->
-		<button type="submit" class="btn btn-primary btn-block" id="submit">Submit</button>
+		<button id="submit" type="submit" class="btn btn-primary btn-block">Submit</button>
 
 		<hr>
         <footer class="footer">
@@ -177,48 +177,8 @@
 
 	</div> <!-- div submit and footer -->
   </div> <!-- div container -->
-</body>
-<script type="text/javascript">
-// In this code below we create the Front-end JavaScript which "POSTS" our form data to our express server.
-// In essence, when the user hits submit, jQuery grabs all of the fields then sends a post request to our api
-// Our api recognizes the route (/friends)... and then runs the associated code (found in api-routes.js).
-// In this case the associated code "saves" the data to the friends.js file
 
-    $("#submit").on("click", function(event) {
-      event.preventDefault();
-      console.log("Got here");
-
-      // Here we grab the form fields
-      var newUser = {
-        name: $("#name").val().trim(),
-        photo: $("#photo").val().trim(),
-        choice: [$("#question1").val(),$("#q2").val(),$("#q3").val(),$("#q4").val(),$("#q5").val(),$("#q6").val(),$("#q7").val(),$("#q8").val(),$("#q9").val(),$("#q10").val()]
-      };
-      
-      console.log("newUser is: ",newUser);
-
-      if(!newUser.choice[0].match(/^\d+$/.$)) {
-      	console.log ("matches");
-      }
-      else {
-      	console.log ("does not match");	
-      }
-
-      // The callback is the response of the server. In our case, we set up code in api-routes 
-      //	that "returns" true or false depending on if "friends" is available or not.
-
-      $.post("/api/friends", newUser,
-        function(result) {
-
-          // grab the result name and photo who match with newUser the best (code will decide)
-          
-   //        $("#best-match-name").text(result.name);
-   //        $("#best-match-photo").attr("src", result.photo);
- 	//	   $("#myModal").modal("fade");
-
-        });
-
-    }); // end .submit
+<script type="text/JavaScript">
 
 // In this code, jQuery is used to "download" the data from our server
 	// We then dynamically display this content in our table. This is very similar to the group projects you just completed.
@@ -238,19 +198,19 @@
 				console.log(friendsArray);
 				console.log("------------------------------------");
 				// Loop through and display each of the customers
-/*				for (var i=0; i<friendsArray.length; i++){
+				for (var i=0; i<friendsArray.length; i++){
 					// Create the HTML Well (Section) and Add the table content for each friend
 					var friendsSection = $("<div>");
 					friendsSection.addClass('well');
-					friendsSection.attr('id', 'tableWell-' + i+1);
+					friendsSection.attr('id', 'friendsWell-' + i+1);
 					$('#friendsSection').append(friendsSection);
 					var friendNumber = i + 1;
 					// Then display the remaining fields in the HTML (Section Name, Date, URL)
-					$("#tableWell-"+ i+1).append('<h2><span class="label label-primary">' + friendNumber + "</span> | " + friendsArray[i].name + "</h2>");
+					$("#friendsWell-"+ i+1).append('<h2><span class="label label-primary">' + friendNumber + "</span> | " + friendsArray[i].name + "</h2>");
 				}  // end of for loop
-*/
+
 			});
-	}
+	};
 	// This function resets all of the data in friends. This is intended to let you restart a demo.
 /*
 	function clearFriends(){
@@ -268,5 +228,59 @@
 	// Run Query on friends
 	runFriendsQuery();
 
+// In this code below we create the Front-end JavaScript which "POSTS" our form data to our express server.
+// In essence, when the user hits submit, jQuery grabs all of the fields then sends a post request to our api
+// Our api recognizes the route (/friends)... and then runs the associated code (found in api-routes.js).
+// In this case the associated code "saves" the data to the friends.js file
+
+    $("#submit").on("click", function(event) {
+    	console.log("msg");
+      event.preventDefault();
+      console.log("Got here");
+
+      // Here we grab the form fields
+      var newUser = {
+        name: $("#name").val().trim(),
+        photo: $("#photo").val().trim(),
+        choice: [$("#q1").val(),$("#q2").val(),$("#q3").val(),$("#q4").val(),$("#q5").val(),$("#q6").val(),$("#q7").val(),$("#q8").val(),$("#q9").val(),$("#q10").val()]
+      };
+      
+      console.log("newUser is: ",newUser);
+      return false;
+
+      if(!newUser.choice[0].match(/^\d+$/.$)) {
+      	console.log ("matches");
+      }
+      else {
+      	console.log ("does not match");	
+      }
+
+      var currentURL = window.location.origin;
+      // The callback is the response of the server. In our case, we set up code in api-routes 
+      //	that "returns" true or false depending on if "friends" is available or not.
+
+
+
+      $.post(currentURL + "/api/friends", newUser,
+        function(result) {
+
+  //    $("#name").val("");
+  //    $("#photo").val("");
+  //    $("#question1").val(""); $("#q2").val("")  etc.... if needed 
+
+
+          // grab the result name and photo who match with newUser the best (code will decide)
+          
+           $("#best-match-name").text(result.name);
+           $("#best-match-photo").attr("src", result.photo);
+ 		   $("#myModal").modal("fade");
+
+        });
+
+    }); // end .submit
+
+
 </script>
+
+</body>
 </html>
