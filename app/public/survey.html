@@ -3,12 +3,23 @@
 	<head>
 	<title>Survey</title>
 
-	<!-- jQuery -->
-	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<!-- jQuery 
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>  -->
 
 	<!-- Bootstrap CDNs-->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+<!--	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">         -->
+	
+	<!-- jQuery that matches with bootstrap 
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>  -->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
 	<!-- Font Awesome Glyphicons -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
@@ -17,132 +28,132 @@
 
 	</head>
 
-<body>
-	<div class="container">
-	  <div>
+	<body>
+	  <div class="container">
+	  
 		<h2>Survey Questions</h2>
 		<hr>
 		<h3><strong>About You</strong></h3>
 		<h4><label for="name" >Name (Required)</label></h4>
-		<input type="text" name="name" id="name" class="form-control" required="">
+		<input type="text" name="name" id="name" class="form-control" required>
 
 		<h4><label for="photo" >Link to Photo Image (Required)</label></h4>
-		<input type="text" name="photo" id="photo" class="form-control" required="">
+		<input type="text" name="photo" id="photo" class="form-control" required>
 		<hr>
-
+	<div>
 		<h3><strong>Question 1</strong></h3>
 		<h4>You had a fun childhood.</h4>
-		<select name="option-choice" id="q1">
+		<select name="option-choice" class="form-control" id="q1">
 		  <option value="">Choose an Option</option>
-		  <option value="1">1 (Strongly Disagree)</option>
-		  <option value="2">2</option>
-		  <option value="3">3</option>
-		  <option value="4">4</option>
-		  <option value="5">5 (Strongly Agree)</option>
+		  <option value=1>1 (Strongly Disagree)</option>
+		  <option value=2>2</option>
+		  <option value=3>3</option>
+		  <option value=4>4</option>
+		  <option value=5>5 (Strongly Agree)</option>
 		</select>
-
+		
 		<h3><strong>Question 2</strong></h3>
 		<h4>You have patience to listen to people.</h4>
-		<select name="option-choice" id="q2">
+		<select name="option-choice" class="form-control" id="q2"  width="25">
 		  <option value="">Choose an Option</option>
-		  <option value="1">1 (Strongly Disagree)</option>
-		  <option value="2">2</option>
-		  <option value="3">3</option>
-		  <option value="4">4</option>
-		  <option value="5">5 (Strongly Agree)</option>
+		  <option value=1>1 (Strongly Disagree)</option>
+		  <option value=2>2</option>
+		  <option value=3>3</option>
+		  <option value=4>4</option>
+		  <option value=5>5 (Strongly Agree)</option>
 		</select>
 
 		<h3><strong>Question 3</strong></h3>
 		<h4>You are easily agitated when people are don't do what you think they should.</h4>
-		<select name="option-choice" id="q3">
+		<select name="option-choice" class="form-control" id="q3">
 		  <option value="">Choose an Option</option>
-		  <option value="1">1 (Strongly Disagree)</option>
-		  <option value="2">2</option>
-		  <option value="3">3</option>
-		  <option value="4">4</option>
-		  <option value="5">5 (Strongly Agree)</option>
+		  <option value=1>1 (Strongly Disagree)</option>
+		  <option value=2>2</option>
+		  <option value=3>3</option>
+		  <option value=4>4</option>
+		  <option value=5>5 (Strongly Agree)</option>
 		</select>
 
 		<h3><strong>Question 4</strong></h3>
 		<h4>You like to discuss goals in life.</h4>
-		<select name="option-choice" id="q4">
+		<select name="option-choice" class="form-control" id="q4">
 		  <option value="">Choose an Option</option>
-		  <option value="1">1 (Strongly Disagree)</option>
-		  <option value="2">2</option>
-		  <option value="3">3</option>
-		  <option value="4">4</option>
-		  <option value="5">5 (Strongly Agree)</option>
+		  <option value=1>1 (Strongly Disagree)</option>
+		  <option value=2>2</option>
+		  <option value=3>3</option>
+		  <option value=4>4</option>
+		  <option value=5>5 (Strongly Agree)</option>
 		</select>
 
 		<h3><strong>Question 5</strong></h3>
 		<h4>You find it difficult to relate to other people's feelings.</h4>
-		<select name="option-choice" id="q5">
+		<select name="option-choice" class="form-control" id="q5">
 		  <option value="">Choose an Option</option>
-		  <option value="1">1 (Strongly Disagree)</option>
-		  <option value="2">2</option>
-		  <option value="3">3</option>
-		  <option value="4">4</option>
-		  <option value="5">5 (Strongly Agree)</option>
+		  <option value=1>1 (Strongly Disagree)</option>
+		  <option value=2>2</option>
+		  <option value=3>3</option>
+		  <option value=4>4</option>
+		  <option value=5>5 (Strongly Agree)</option>
 		</select>
 
 		<h3><strong>Question 6</strong></h3>
 		<h4>Your family is a great support system for you.</h4>
-		<select name="option-choice" id="q6">
+		<select name="option-choice" class="form-control" id="q6">
 		  <option value="">Choose an Option</option>
-		  <option value="1">1 (Strongly Disagree)</option>
-		  <option value="2">2</option>
-		  <option value="3">3</option>
-		  <option value="4">4</option>
-		  <option value="5">5 (Strongly Agree)</option>
+		  <option value=1>1 (Strongly Disagree)</option>
+		  <option value=2>2</option>
+		  <option value=3>3</option>
+		  <option value=4>4</option>
+		  <option value=5>5 (Strongly Agree)</option>
 		</select>
 
 		<h3><strong>Question 7</strong></h3>
 		<h4>You talk it out if you're having a difficult challenge with someone or something.</h4>
-		<select name="option-choice" id="q7">
+		<select name="option-choice" class="form-control" id="q7">
 		  <option value="">Choose an Option</option>
-		  <option value="1">1 (Strongly Disagree)</option>
-		  <option value="2">2</option>
-		  <option value="3">3</option>
-		  <option value="4">4</option>
-		  <option value="5">5 (Strongly Agree)</option>
+		  <option value=1>1 (Strongly Disagree)</option>
+		  <option value=2>2</option>
+		  <option value=3>3</option>
+		  <option value=4>4</option>
+		  <option value=5>5 (Strongly Agree)</option>
 		</select>
 
 		<h3><strong>Question 8</strong></h3>
 		<h4>You like most kinds of music.</h4>
-		<select name="option-choice" id="q8">
+		<select name="option-choice" class="form-control" id="q8">
 		  <option value="">Choose an Option</option>
-		  <option value="1">1 (Strongly Disagree)</option>
-		  <option value="2">2</option>
-		  <option value="3">3</option>
-		  <option value="4">4</option>
-		  <option value="5">5 (Strongly Agree)</option>
+		  <option value=1>1 (Strongly Disagree)</option>
+		  <option value=2>2</option>
+		  <option value=3>3</option>
+		  <option value=4>4</option>
+		  <option value=5>5 (Strongly Agree)</option>
 		</select>
 
 		<h3><strong>Question 9</strong></h3>
 		<h4>You get a charge out of being around a group of people.</h4>
-		<select name="option-choice" id="q9">
+		<select name="option-choice" class="form-control" id="q9">
 		  <option value="">Choose an Option</option>
-		  <option value="1">1 (Strongly Disagree)</option>
-		  <option value="2">2</option>
-		  <option value="3">3</option>
-		  <option value="4">4</option>
-		  <option value="5">5 (Strongly Agree)</option>
+		  <option value=1>1 (Strongly Disagree)</option>
+		  <option value=2>2</option>
+		  <option value=3>3</option>
+		  <option value=4>4</option>
+		  <option value=5>5 (Strongly Agree)</option>
 		</select>
 
 		<h3><strong>Question 10</strong></h3>
 		<h4>You like to get out a good laugh now and again.</h4>
-		<select name="option-choice" id="q10">
+		<select name="option-choice" class="form-control" id="q10">
 		  <option value="">Choose an Option</option>
-		  <option value="1">1 (Strongly Disagree)</option>
-		  <option value="2">2</option>
-		  <option value="3">3</option>
-		  <option value="4">4</option>
-		  <option value="5">5 (Strongly Agree)</option>
+		  <option value=1>1 (Strongly Disagree)</option>
+		  <option value=2>2</option>
+		  <option value=3>3</option>
+		  <option value=4>4</option>
+		  <option value=5>5 (Strongly Agree)</option>
 		</select>
 
 		<br>
 		<br>
-	</div> <!-- before survey questions -->
+	<!-- if you wanted an extra div before survey questions, it would be end here -->
 
 	<div id="myModal" class="modal fade" role="dialog">
 	  	<div class="modal-dialog">
@@ -163,10 +174,10 @@
 		</div> <!-- div modal-dialog -->
 	</div>  <!-- div myModal -->
 
-	<div>
+	<!--  <div>  no need for this -->
 
 		<!-- Submit Button -->
-		<button id="submit" type="submit" class="btn btn-primary btn-block">Submit</button>
+		<button type="submit" class="btn btn-primary submit submit-block">Submit</button>
 
 		<hr>
         <footer class="footer">
@@ -175,8 +186,9 @@
       		</div>
     	</footer>
 
-	</div> <!-- div submit and footer -->
+	 <!-- </div> div submit and footer -->
   </div> <!-- div container -->
+</body>
 
 <script type="text/JavaScript">
 
@@ -199,6 +211,7 @@
 				console.log("------------------------------------");
 				// Loop through and display each of the customers
 				for (var i=0; i<friendsArray.length; i++){
+					console.log(friendsArray[i]);
 					// Create the HTML Well (Section) and Add the table content for each friend
 					var friendsSection = $("<div>");
 					friendsSection.addClass('well');
@@ -229,58 +242,79 @@
 	runFriendsQuery();
 
 // In this code below we create the Front-end JavaScript which "POSTS" our form data to our express server.
-// In essence, when the user hits submit, jQuery grabs all of the fields then sends a post request to our api
+// When the user clicks submit, jQuery grabs all fields then sends a post request to our api
 // Our api recognizes the route (/friends)... and then runs the associated code (found in api-routes.js).
 // In this case the associated code "saves" the data to the friends.js file
 
-    $("#submit").on("click", function(event) {
-    	console.log("msg");
+    $(".submit").on("click", function(event) {
       event.preventDefault();
-      console.log("Got here");
-
       // Here we grab the form fields
       var newUser = {
         name: $("#name").val().trim(),
         photo: $("#photo").val().trim(),
-        choice: [$("#q1").val(),$("#q2").val(),$("#q3").val(),$("#q4").val(),$("#q5").val(),$("#q6").val(),$("#q7").val(),$("#q8").val(),$("#q9").val(),$("#q10").val()]
+        scores: [$("#q1").val(),$("#q2").val(),$("#q3").val(),$("#q4").val(),$("#q5").val(),$("#q6").val(),$("#q7").val(),$("#q8").val(),$("#q9").val(),$("#q10").val()]
       };
       
-      console.log("newUser is: ",newUser);
-      return false;
+      console.log("newUser is: ", newUser);
 
-      if(!newUser.choice[0].match(/^\d+$/.$)) {
-      	console.log ("matches");
-      }
-      else {
-      	console.log ("does not match");	
-      }
+	function validateUser() {
+		console.log("starting validateUser");
+		var formValid = true;
+		$(".form-control").each(function() {
+			if ($(this).val() === "") {
+				formValid = false;
+    		}
+    		console.log("form-control works");
+    	});
 
+    	return formValid;
+	};
+
+	if (validateUser() === true) {
+		console.log("form is validated");
+// 
+	  // var newUser = {
+   //      name: $("#name").val().trim(),
+   //      photo: $("#photo").val().trim(),
+   //      scores: [$("#q1").val(),$("#q2").val(),$("#q3").val(),$("#q4").val(),$("#q5").val(),$("#q6").val(),$("#q7").val(),$("#q8").val(),$("#q9").val(),$("#q10").val()]
+   //    };
+   //		console.log("newUser is: ", newUser);
+      
       var currentURL = window.location.origin;
       // The callback is the response of the server. In our case, we set up code in api-routes 
       //	that "returns" true or false depending on if "friends" is available or not.
 
-
+//  *********** TAKE OUT LATER       *****************************************************
+//  *********** TAKE OUT LATER       *****************************************************
 
       $.post(currentURL + "/api/friends", newUser,
         function(result) {
-
-  //    $("#name").val("");
-  //    $("#photo").val("");
-  //    $("#question1").val(""); $("#q2").val("")  etc.... if needed 
-
+        	alert("working");
+        	console.log("Friend match: ", result);
+	  		console.log("result: HARD CODED FOR NOW TO SEE IT MODAL WORKING", result.name, 
+	  			result.photo);
+		    $("#name").val(""); $("#photo").val(""); $("#q1").val(""); $("#q2").val(""); 
+      		$("#q3").val(""); $("#q4").val(""); $("#q5").val(""); $("#q6").val(""); 
+      		$("#q7").val(""); $("#q8").val(""); $("#q9").val(""); $("#q10").val(""); 
+			alert("done with reset");
 
           // grab the result name and photo who match with newUser the best (code will decide)
-          
-           $("#best-match-name").text(result.name);
-           $("#best-match-photo").attr("src", result.photo);
- 		   $("#myModal").modal("fade");
+result.name = "fake name test";
+result.photo = "https://www.dreamstime.com/stock-photo-silhouette-backlit-sport-women-open-arms-raised-towards-hope-sky-sunset-light-effect-concept-life-achievements-image58746283";
 
+            $("#best-match-name").text(result.name);
+            $("#best-match-photo").attr("src", result.photo);
+ 		    $("#myModal").modal("fade");
         });
+  	}
+  	else {
+  		alert("Fill out all fields before you Submit the form");
+  	}
 
     }); // end .submit
 
-
+	
 </script>
 
-</body>
+
 </html>

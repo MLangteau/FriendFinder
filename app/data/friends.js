@@ -1,20 +1,20 @@
 // friendsArray will hold all of the potential friends.
-// We set it up with potential friends, so the code has some choices 
+// We set it up with potential friends, so there are friends to choose from on initial setup
 
 var friendsArray = [
   {
   name:"Penelope",
   photo:"https://images.pexels.com/photos/206559/pexels-photo-206559.jpeg?h=350&auto=compress&cs=tinysrgb",
   scores:[
+      3,
+      5,
+      5,
+      4,
+      5,
       5,
       1,
-      4,
-      4,
-      5,
       1,
-      2,
-      5,
-      4,
+      1,
       1
     ]}, 
   {
@@ -24,10 +24,10 @@ var friendsArray = [
       1,
       3,
       3,
-      2,
-      2,
       3,
-      5,
+      3,
+      3,
+      3,
       2,
       3,
       5]}, 
@@ -38,11 +38,11 @@ var friendsArray = [
       5,
       1,
       4,
-      4,
-      5,
+      2,
       1,
       2,
-      5,
+      2,
+      2,
       4,
       1]},
   {
@@ -51,14 +51,28 @@ var friendsArray = [
   scores:[
       5,
       1,
-      4,
-      4,
-      5,
-      1,
       2,
-      5,
+      3,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1]},
+      {
+  name: "Meagan Trainor",
+  photo: "https://i.ytimg.com/vi/7PCkvCPvDXk/maxresdefault.jpg",
+  scores: [
       4,
-      1]}
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4]},
 ];
 
 // This makes it accessible to other files using require.
