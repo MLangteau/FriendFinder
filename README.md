@@ -23,9 +23,10 @@
 ### Friends List Page is found by either clicking on the available links that are provided: "API Friends List or 
 ### following step 1 below.  The last link available is the link to this GitHub Repo".  (see Screenshot #4)
 
-    1.  The API Friends List page will list all friends from the available Friends List File (friends.js).  The user
-    	will either go to the local host and type 'localhost8080/api/friends' to get the API Friends List or click 
-	on the 'API Friends List' link located at the bottom of both the Main and Survey pages.  (see Screenshot #5)
+    1.  The API Friends List page will list all friends from the available Friends List File (friends.js).  The 
+    	user will either go to the local host and type 'localhost8080/api/friends' to get the API Friends List 
+	or click on the 'API Friends List' link located at the bottom of both the Main and Survey pages.  
+	(see Screenshot #5)
 	
     2.  The GitHub Repository is also availabe at the bottom of both the Main and Survey pages by clicking on the 
     	'GitHub Repo' link.  
