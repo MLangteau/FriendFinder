@@ -2,30 +2,10 @@
 <html lang="en">
 	<head>
 	<title>Survey</title>
-
-	<!-- jQuery 
-	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>  -->
-
-	<!-- Bootstrap CDNs-->
-<!--	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">         -->
-	
-	<!-- jQuery that matches with bootstrap 
-	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>  -->
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-	<!-- Optional theme -->
-<!--	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">          -->
-
 	<!-- Font Awesome Glyphicons -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
-
 	</head>
 
 	<body>
@@ -188,8 +168,15 @@
 
 	 <!-- </div> div submit and footer -->
   </div> <!-- div container -->
-</body>
 
+<!-- jQuery -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
+  <!-- ajax -->
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
+  <!-- Bootstrap -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+</body>
 <script type="text/JavaScript">
 
 // In this code, jQuery is used to "download" the data from our server
@@ -306,8 +293,9 @@
 	//result.photo = "https://www.dreamstime.com/stock-photo-silhouette-backlit-sport-women-open-arms-raised-towards-hope-sky-sunset-light-effect-concept-life-achievements-image58746283";
 
 	            $("#best-match-name").text(result.name);
-	            $("#best-match-photo").attr("src",result.photo);
-	 		    $("#myModal").modal("fade");
+	            $("#best-match-photo").attr("src",result.photo).css('width','30%');
+	 		   $("#myModal").modal("toggle").css("float","right");
+	 		 //  .css('margin', '100px auto 100px auto');
 	 		} // if result
 	 		else {
 	 			alert("No friend was found");

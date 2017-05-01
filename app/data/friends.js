@@ -34,7 +34,7 @@ var friendsArray = [
     ]}, 
   {
   name:"Frederic",
-  photo:"https://www.pexels.com/photo/man-young-happy-smiling-91227/",
+  photo:"https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSfvslSVQuzPcCLmMOW4iGsaieZbqM7nXwr8BbI4BiHVQ9XvMb5",
   scores:[
       1,
       3,
@@ -74,7 +74,7 @@ var friendsArray = [
       1,
       1,
       1]},
-      {
+  {
   name: "Meagan Trainor",
   photo: "https://i.ytimg.com/vi/7PCkvCPvDXk/maxresdefault.jpg",
   scores: [
@@ -87,7 +87,38 @@ var friendsArray = [
       4,
       4,
       4,
-      4]},
+      4]
+  },
+  {
+  name: "Wendy",
+  photo: "https://images.pexels.com/photos/51969/model-female-girl-beautiful-51969.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb",
+  scores: [
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3]
+  },
+  {
+  name: "Justin Bieber",
+  photo: "http://images2.fanpop.com/image/photos/10500000/Photoshoots-2010-Unknown-Photoshoot-2-justin-bieber-10566009-399-277.jpg",
+  scores: [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2]
+  }
 ];
 
 // This makes it accessible to other files using require.
