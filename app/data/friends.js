@@ -3,6 +3,21 @@
 
 var friendsArray = [
   {
+  name:"Oneder Wickby",
+  photo:"http://static.tumblr.com/14eb048e98bdc079d67648c24ce7760b/ghddhw8/xfQocqar7/tumblr_static_581o02bvh3wgk0osg00c4cw0w.png",
+  scores:[
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      2
+    ]}, 
+  {
   name:"Penelope",
   photo:"https://images.pexels.com/photos/206559/pexels-photo-206559.jpeg?h=350&auto=compress&cs=tinysrgb",
   scores:[

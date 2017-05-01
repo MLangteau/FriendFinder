@@ -9,7 +9,8 @@ var friendsArray = require("../data/friends");  // .js is optional (so I left if
 module.exports = function(app) {
 	
 //	A GET route with the url /api/friends. This will be used to display a JSON of 
-//  		all possible friend matches.
+//  		all possible friend matches in the database
+
 	app.get("/api/friends", function(req, res) {
 		console.log("friends: ", friendsArray)
 		res.json(friendsArray);
@@ -26,7 +27,7 @@ module.exports = function(app) {
 	app.post("/api/friends", function(req, res) {
 
 // ******************************     CHANGE THIS  below   **********************************
-	    // matchFriend = {
+	    // matchedFriend = {
 	    // 	name: "",
 	    // 	photo: ""
 	    // };
@@ -53,14 +54,13 @@ module.exports = function(app) {
 	    var newScores = newFriend.scores;       // .scores is set up in survey.html
 	    console.log("newScores: ", newScores);  // 
 
-// initially set up blank as matchFriend - each comparison will put the best comparison.
+// initially set up blank as matchedFriend - each comparison will put the best comparison.
+		
+		var currentFriendDiff = 0;
+		var totalDiff = 100;  //  set in the beginning of comparison to make higher than total (1st time)
+		
 
-		var matchedIndex = [];  
-
-		var totalDiff = 100;  //  set in the beginning of comparison 
-		var eachFriendDiff = 0;
-
-		console.log("friendsArray.length: " + friendsArray.length);
+		console.log("friendsArray.length ********************************: " + friendsArray.length);
 		if (friendsArray.length >= 0){
 			
 			// run through scores
@@ -68,10 +68,10 @@ module.exports = function(app) {
 			for (i=0; i<friendsArray.length; i++) {
 				// do comparison of friends
 				console.log("Comparison index #" + i + " is: " + friendsArray[i].name);
-				console.log("friendsArray[i].scores.length: " + friendsArray[i].scores.length + "\n");
-				eachFriendDiff = 0;
+		//		console.log("friendsArray[i].scores.length: " + friendsArray[i].scores.length);
+				currentFriendDiff = 0;
 				console.log("database friendsArray[i].scores: " + friendsArray[i].scores);
-				console.log("New user input newscores: " + newScores);
+				console.log("-------New user input newscores: " + newScores);
 
 
 				for (j=0; j<friendsArray[i].scores.length; j++) {
@@ -79,37 +79,33 @@ module.exports = function(app) {
 					//  	and the newScores (the New User's scores)
 					// absolute value of diff
 
-					console.log("database friendsArray[i].scores[j]: " + friendsArray[i].scores[j]);
-					console.log("New user input newscores[j]: " + newScores[j]);
+					//console.log("database friendsArray[i].scores[j]: " + friendsArray[i].scores[j]);
+					//console.log("New user input newscores[j]: " + newScores[j]);
 
-					eachFriendDiff = eachFriendDiff + Math.abs(friendsArray[i].scores[j] - newScores[j]);
-					console.log("eachFriendDiff: " + eachFriendDiff + " j: " + j);
-
-					if ((eachFriendDiff > totalDiff) || totalDiff === 100) { // greater or 1st time
-						console.log("this diff is current match");
-						console.log("friendsArray[i]: " + i);
-						var matchedFriend = friendsArray[i];
-					}
-					else {
-						// don't change the match 
-					}
-
-
+					currentFriendDiff = currentFriendDiff + Math.abs(friendsArray[i].scores[j] - newScores[j]);
+				//	console.log("currentFriendDiff: " + currentFriendDiff + " j: " + j);
 				}
 
+				// when done adding up all the differences between currentFriend and User compare
+				console.log("this diff is current before compare: " + currentFriendDiff);
+				console.log("totalDiff            before compare: " + totalDiff);
+				if (currentFriendDiff < totalDiff) {        // 1st time will be less than 100
+					console.log("currentFriend is a closer match: " + currentFriendDiff);
+					totalDiff = currentFriendDiff;  // currentFriend is a closer match
+					console.log("friendsArray[i] match: i: " + i + " ", friendsArray[i]);
+					var matchedFriend = friendsArray[i];
+				}
 
 			}
-
-
-			//  Add new user to the friendsArray
+			console.log("Add new user to the friendsArray after all comparisons");
+			//  Add new user to the friendsArray after all comparisons
 			friendsArray.push(newFriend);
-//  THIS WILL CHANGE ONCE MATCHEDFRIEND IS FIGURED OUT
-			res.json(newFriend);  // this will come out ***********************   OUT  ****
-//			res.json(matchedFriend);
+			res.json(matchedFriend);
 		}
 		else 
 		{
-			//  Add new user to the friendsArray
+			console.log("Add new user to the friendsArray when none in database");
+			//  Add new user to the friendsArray when none in database
 			friendsArray.push(newFriend);
 			res.json(false);  // when false will send a dummy picture
 		}

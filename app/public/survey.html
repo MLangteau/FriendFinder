@@ -19,7 +19,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 	<!-- Optional theme -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<!--	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">          -->
 
 	<!-- Font Awesome Glyphicons -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
@@ -289,22 +289,29 @@
 
       $.post(currentURL + "/api/friends", newUser,
         function(result) {
-        	alert("working");
-        	console.log("Friend match: ", result);
-	  		console.log("result: HARD CODED FOR NOW TO SEE IT MODAL WORKING", result.name, 
-	  			result.photo);
-		    $("#name").val(""); $("#photo").val(""); $("#q1").val(""); $("#q2").val(""); 
-      		$("#q3").val(""); $("#q4").val(""); $("#q5").val(""); $("#q6").val(""); 
-      		$("#q7").val(""); $("#q8").val(""); $("#q9").val(""); $("#q10").val(""); 
-			alert("done with reset");
+        	// alert("working");
+        	if (result) {
+	        	console.log("matchedFriend (from apiRoutes: ", result);
+		  		console.log("result: HARD CODED FOR NOW TO SEE IT MODAL WORKING", result.name, 
+		  			result.photo);
 
-          // grab the result name and photo who match with newUser the best (code will decide)
-result.name = "fake name test";
-result.photo = "https://www.dreamstime.com/stock-photo-silhouette-backlit-sport-women-open-arms-raised-towards-hope-sky-sunset-light-effect-concept-life-achievements-image58746283";
+			    $("#name").val(""); $("#photo").val(""); $("#q1").val(""); $("#q2").val(""); 
+	      		$("#q3").val(""); $("#q4").val(""); $("#q5").val(""); $("#q6").val(""); 
+	      		$("#q7").val(""); $("#q8").val(""); $("#q9").val(""); $("#q10").val(""); 
+				console.log("done with reset");
 
-            $("#best-match-name").text(result.name);
-            $("#best-match-photo").attr("src", result.photo);
- 		    $("#myModal").modal("fade");
+				console.log("result ", result);
+	          // grab the result name and photo who match with newUser the best (code will decide)
+	//result.name = "fake name test";
+	//result.photo = "https://www.dreamstime.com/stock-photo-silhouette-backlit-sport-women-open-arms-raised-towards-hope-sky-sunset-light-effect-concept-life-achievements-image58746283";
+
+	            $("#best-match-name").text(result.name);
+	            $("#best-match-photo").attr("src",result.photo);
+	 		    $("#myModal").modal("fade");
+	 		} // if result
+	 		else {
+	 			alert("No friend was found");
+	 		}
         });
   	}
   	else {
