@@ -6,7 +6,7 @@
 
     1.  'nodemon server.js'
 
-    2.  The user will go to the local host and type 'localhost8080/' to get the main menu.  (see screenshot #1)
+    2.  The user will go to the local host and type 'localhost8080/' to get the main menu.  (see Screenshot #1)
     
 ######       ![Alt text](images/mainPage.png?raw=true "Screenshot #1")
 
@@ -14,19 +14,19 @@
         
 ### The Survey Page is found by either clicking on 'Go To Survey' or typing 'localhost8080/survey' in the Address Bar (top of page):
 
-    1.  Once the user is on the Survey Questions page, they must answer the questions provided.  (see screenshot #2)
+    1.  Once the user is on the Survey Questions page, they must answer the questions provided.  (see Screenshot #2)
     
 ######       ![Alt text](images/surveypage1.png?raw=true "Screenshot #2")
     
     2.  Once the Submit button is pressed, the app will determine the closest choice for a best match and adds the 
     new User to the database.  This is also where the app determines if all fields were entered or not.  If not 
     entered properly, a message will appear to tell the user to "Fill out all fields before you Submit the form".
-    (see screenshot #3)
+    (see Screenshot #3)
     
 ######       ![Alt text](images/surveypage2.png?raw=true "Screenshot #3")
 	
     3.  Then, the app will display a modal (picture and name) of the best match for the user and will clear the 
-    survey questions.  (see screenshot #4)
+    survey questions.  (see Screenshot #4)
     
 ######       ![Alt text](images/modalAndClear.png?raw=true "Screenshot #4")
 
