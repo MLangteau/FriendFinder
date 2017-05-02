@@ -40,4 +40,4 @@
 ######       ![Alt text](images/apiFriends.png?raw=true "Screenshot #5")
 	
     2.  The GitHub Repository is available at the bottom of both the Main and Survey pages by clicking on the 
-    'GitHub Repo' link.  (see Screenshot #1 or Screenshot #2 above)
+    'GitHub Repo' link.  (see Screenshot #1 or Screenshot #3 above)
